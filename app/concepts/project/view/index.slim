@@ -1,0 +1,26 @@
+h1 Listing projects
+
+table
+  thead
+    tr
+      th Name
+      th Description
+      th Active
+      th
+      th
+      th
+
+  tbody
+    - model.each do |project|
+      tr
+        td = project.name
+        td = project.description
+        td = project.active
+        td = project_link(project)
+        td = toggle_project_activity_link(project)
+        td = edit_project_link(project)
+        td = destroy_project_link(project)
+
+br
+
+= new_project_link

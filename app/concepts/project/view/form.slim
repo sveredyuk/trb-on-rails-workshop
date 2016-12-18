@@ -1,0 +1,12 @@
+= simple_form_for contract do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description
+
+  .form-actions
+    = f.button :submit
+
+.form-actions
+  = back_to_projects_link
